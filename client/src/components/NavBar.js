@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-export default function NavBar() {
+export default function NavBar(props) {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
+    <>
     <nav className="flex items-center justify-between flex-wrap bg-gray-800 py-4 px-8">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <a href="/" className="font-thin text-xl tracking-tight">
@@ -66,19 +67,19 @@ export default function NavBar() {
               Home
             </a>
             <a
-              href="/"
+              href="/discover"
               className="font-thin block mt-4 lg:inline-block lg:mt-0 text-white hover:opacity-75 mx-4"
             >
               Discover
             </a>
             <a
-              href="/"
+              href="/mygames"
               className="font-thin block mt-4 lg:inline-block lg:mt-0 text-white hover:opacity-75 mx-4"
             >
               My Games
             </a>
             <a
-              href="/"
+              href="/browse"
               className="font-thin block mt-4 lg:inline-block lg:mt-0 text-white hover:opacity-75 mx-4"
             >
               Browse
@@ -86,7 +87,7 @@ export default function NavBar() {
           </div>
           <div className="lg:mt-0 mt-4">
             <a
-              href="/"
+              href="/login"
               className="font-thin px-4 py-2 bg-purple-700 leading-none border rounded text-white border-transparent hover:opacity-75 mt-4 lg:mt-0"
             >
               Login
@@ -95,5 +96,8 @@ export default function NavBar() {
         </div>
       </div>
     </nav>
+
+    {props.children}
+    </>
   );
 }
