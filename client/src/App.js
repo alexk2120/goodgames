@@ -6,7 +6,6 @@ import Discover from './components/Discover';
 import MyGames from './components/MyGames'
 import Browse from './components/Browse';
 import Login from './components/Login';
-
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
             <Route path="/mygames" element={<MyGames />}/>
             <Route path="/browse" element={<Browse />}/>
             <Route path="/login" element={<Login />}/>
-
           </Routes>
         </NavBar>
       </BrowserRouter>
